@@ -53,7 +53,7 @@ a)  Create a new repository on GitHub in your account named
     we are able to see it for grading. Add the link to the repository
     below:
     
-    https://github.com/olyasu66/exeRcise-sheet-3.git
+    git@github.com:olyasu66/exeRcise-sheet-3.git
     
 b)  Push your code to this new repository by copying and executing the
     snippet on github listed under
