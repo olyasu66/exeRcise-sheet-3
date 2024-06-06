@@ -144,6 +144,15 @@ popular_names <- names_data %>%
   arrange(desc(total_count))
 ```
 
+```{r}
+library(knitr)
+top_10_names <- popular_names %>%
+  slice_head(n = 10) %>%
+  kable(caption = "Top 10 Most Popular Names Across Both Years")
+
+print(top_10_names)
+```
+
 ## Exercise 4: Open Analysis (4 points)
 
 This exercise is a bit more open-ended. You can choose any dataset from
