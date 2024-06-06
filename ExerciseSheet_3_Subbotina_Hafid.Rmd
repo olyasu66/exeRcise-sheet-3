@@ -174,7 +174,15 @@ d)  Come up with a (research) question you want to answer with the data
     and briefly explain why you believe this is an interesting question
     within one sentence. It should be a question that can be answered
     with the dataset and using R.
+
+    **Does cigarette consumption per person decrease over time?**
+
+    This question will be interesting to study to evaluate the
+    effectiveness of anti-tobacco measures such as the introduction of
+    anti-tobacco laws, tax increases and cigarette prices.
+
 e)  Use R to answer your chosen question.
+
 f)  Create a meaningful plot / figure with the dataset. Make sure to
     provide a figure caption (via the chunk options / Rmarkdown) and
     correctly label the figure.
