@@ -213,6 +213,14 @@ e)  Use R to answer your chosen question.
       theme_minimal()
     ```
 
+The decrease in the number of cigarettes smoked per person per day in
+various countries may reflect the widespread adoption and successful
+implementation of anti-tobacco measures, such as increased tobacco
+taxes, bans on smoking in public places, and public awareness campaigns
+about the harms of smoking. However, the existence of countries where
+there is an increase in cigarette consumption requires further research
+and analysis of the factors influencing this trend.
+
 ## Final Note
 
 Make sure to push all your commits and changes to GitHub before
