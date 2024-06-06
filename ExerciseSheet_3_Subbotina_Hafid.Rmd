@@ -150,12 +150,12 @@ popular_names <- names_data %>%
 library(knitr)
 top_10_names <- popular_names %>%
   slice_head(n = 10) %>%
-  kable(caption = "Top 10 Most Popular Names Across Both Years")
+  knitr::kable(caption = "Top 10 Most Popular Names Across Both Years")
 
 print(top_10_names)
 ```
 
-## Exercise 4: Open Analysis (4 points) 
+## Exercise 4: Open Analysis (4 points)
 
 This exercise is a bit more open-ended. You can choose any dataset from
 [Our World in Data](https://ourworldindata.org/) and analyze it, while
@@ -170,7 +170,7 @@ c)  Put the name / title of the dataset and a link to it below.
 -   Dataset Name: Smoking prevalence and cigarette consumption (IHME,
     GHDx (2012))
 -   Link:
-    [https://github.com/owid/owid-datasets/tree/master/datasets/Smoking%20prevalence%20and%20cigarette%20consumption%20(IHME%2C%20GHDx%20(2012)](https://github.com/owid/owid-datasets/tree/master/datasets/Smoking%20prevalence%20and%20cigarette%20consumption%20(IHME%2C%20GHDx%20(2012)){.uri})
+    [https://github.com/owid/owid-datasets/tree/master/datasets/Smoking%20prevalence%20and%20cigarette%20consumption%20(IHME%2C%20GHDx%20(2012)](https://github.com/owid/owid-datasets/tree/master/datasets/Smoking%20prevalence%20and%20cigarette%20consumption%20(IHME%2C%20GHDx%20(2012))%7B.uri%7D)
 
 d)  Come up with a (research) question you want to answer with the data
     and briefly explain why you believe this is an interesting question
