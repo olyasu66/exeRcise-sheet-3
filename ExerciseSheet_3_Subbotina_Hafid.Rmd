@@ -4,8 +4,10 @@ subtitle: "Fortgeschrittene Statistische Software für NF"
 author: "Olga Subbotina (12341384), Sukaina Hafid (12310314)"
 date: "`r Sys.Date()`"
 output: distill::distill_article
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
-
 
 ## Exercise 1: Initializing git (4 Points)
 
@@ -27,19 +29,25 @@ c)  For all of the following tasks in this exercise sheet we ask you to
 
 d)  Name 2 strengths and 2 weaknesses of git. (Don't forget to create a
     commit after this answer, see *1c*)
-    
+
     Strengths:
 
-Git allows multiple developers to work on the same project simultaneously without overwriting each other's changes. It manages and merges contributions from different sources efficiently.
+Git allows multiple developers to work on the same project
+simultaneously without overwriting each other's changes. It manages and
+merges contributions from different sources efficiently.
 
-Git keeps a detailed history of all changes made to the codebase, enabling developers to understand the evolution of the project and revert to previous versions if necessary.
+Git keeps a detailed history of all changes made to the codebase,
+enabling developers to understand the evolution of the project and
+revert to previous versions if necessary.
 
-    Weaknesses:
+Weaknesses:
 
-Git has a steep learning curve, especially for beginners who may find its commands and workflows complex.
+Git has a steep learning curve, especially for beginners who may find
+its commands and workflows complex.
 
-Git is not optimized for handling large files or large repositories, which can lead to performance issues.
-    
+Git is not optimized for handling large files or large repositories,
+which can lead to performance issues.
+
 e)  Knit this exercise sheet. Some new files will automatically be
     generated when knitting the sheet e.g. the HTML page. Ignore these
     files, as we only want to track the source files themselves.
@@ -52,12 +60,13 @@ a)  Create a new repository on GitHub in your account named
     `exeRcise-sheet-3`. Make sure you create a **public repository** so
     we are able to see it for grading. Add the link to the repository
     below:
-    
-    git@github.com:olyasu66/exeRcise-sheet-3.git
-    
+
+    [git\@github.com](mailto:git@github.com){.email}:olyasu66/exeRcise-sheet-3.git
+
 b)  Push your code to this new repository by copying and executing the
     snippet on github listed under
     `…or push an existing repository from the command line`.
+
 c)  Regularly push your latest changes to GitHub again and especially do
     so when you are finished with this sheet.
 
@@ -77,6 +86,20 @@ b)  Load the data for both years into R. Check the type of the count
     not numeric? Fix the problem in an appropriate manner, it is OK if
     some of the counts are inaccurate because of this. Explain your
     solution and the repercussions.
+
+```{r}
+names_2022 <- read.csv("open_data_portal_2022.csv")
+names_2023 <- read.csv("vornamen-muenchen-2023.csv")
+```
+
+```{r echo=TRUE, message=TRUE, warning=TRUE}
+library(tidyverse)
+names_2022 <- names_2022 %>%
+  mutate(Anzahl = as.numeric(str_replace(Anzahl, "4 oder weniger", "4")))
+
+names_2023 <- names_2023 %>%
+  mutate(Anzahl = as.numeric(str_replace(Anzahl, "4 oder weniger", "4")))
+```
 
 c)  Calculate the total number of babies born in Munich in 2022
     and 2023. Which year had the bigger baby-boom?
