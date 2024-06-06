@@ -101,8 +101,8 @@ names_2023 <- names_2023 %>%
   mutate(Anzahl = as.numeric(str_replace(Anzahl, "4 oder weniger", "4")))
 ```
 
-c. Calculate the total number of babies born in Munich in 2022 and 2023.
-Which year had the bigger baby-boom?
+c.  Calculate the total number of babies born in Munich in 2022
+    and 2023. Which year had the bigger baby-boom?
 
 ```{r}
 total_babies_2022 <- names_2022 %>% 
@@ -115,8 +115,8 @@ total_babies_2023 <- names_2023 %>%
   pull(total_babies_2023)
 ```
 
-d. Add a new column `year` to both datasets which holds the correct year
-for each.
+d.  Add a new column `year` to both datasets which holds the correct
+    year for each.
 
 ```{r}
 names_2022 <- names_2022 %>%
@@ -126,15 +126,23 @@ names_2023 <- names_2023 %>%
   mutate(year = 2023)
 ```
 
-e. Combine both datasets into one using `bind_rows()`.
+e.  Combine both datasets into one using `bind_rows()`.
 
 ```{r}
 names_data <- bind_rows(names_2022, names_2023)
 ```
 
-f. Combine the counts for same names to determine the most popular names
-across both years. Print out the top 10 names in a nicely formatted
-table for both years. Include a table caption.
+f.  Combine the counts for same names to determine the most popular
+    names across both years. Print out the top 10 names in a nicely
+    formatted table for both years. Include a table caption.
+
+```{r}
+popular_names <- names_data %>%
+  group_by(Vorname) %>%
+  summarise(total_count = sum(Anzahl)) %>%
+  ungroup() %>%
+  arrange(desc(total_count))
+```
 
 ## Exercise 4: Open Analysis (4 points)
 
