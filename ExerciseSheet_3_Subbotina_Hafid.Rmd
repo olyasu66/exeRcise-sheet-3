@@ -63,6 +63,8 @@ a)  Create a new repository on GitHub in your account named
 
     [git\@github.com](mailto:git@github.com){.email}:olyasu66/exeRcise-sheet-3.git
 
+    or <https://github.com/olyasu66/exeRcise-sheet-3>
+
 b)  Push your code to this new repository by copying and executing the
     snippet on github listed under
     `…or push an existing repository from the command line`.
