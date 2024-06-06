@@ -108,7 +108,7 @@ Which year had the bigger baby-boom?
 total_babies_2022 <- names_2022 %>% 
   summarise(total_babies_2022 = sum(Anzahl, na.rm = TRUE)) %>% 
   pull(total_babies_2022)
-cat("More babies were born in 2022:", total_babies_2022, "\n")
+cat("More babies were born in 2022:approximately", total_babies_2022, "\n")
 
 total_babies_2023 <- names_2023 %>% 
   summarise(total_babies_2023 = sum(Anzahl, na.rm = TRUE)) %>% 
@@ -117,6 +117,14 @@ total_babies_2023 <- names_2023 %>%
 
 d. Add a new column `year` to both datasets which holds the correct year
 for each.
+
+```{r}
+names_2022 <- names_2022 %>%
+  mutate(year = 2022)
+
+names_2023 <- names_2023 %>%
+  mutate(year = 2023)
+```
 
 e. Combine both datasets into one using `bind_rows()`.
 
