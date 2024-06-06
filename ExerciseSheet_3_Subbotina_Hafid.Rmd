@@ -183,9 +183,35 @@ d)  Come up with a (research) question you want to answer with the data
 
 e)  Use R to answer your chosen question.
 
-f)  Create a meaningful plot / figure with the dataset. Make sure to
+    ```{r}
+    data <- read.csv("Smoking prevalence and cigarette consumption (IHME, GHDx (2012)).csv")
+
+    unique_countries <- data %>%
+       select(Entity) %>%
+       distinct()
+     
+     set.seed(12354987)  
+     sample_countries <- unique_countries %>%
+       sample_n(5)
+    ```
+
+    ```{r}
+    filtered_data <- data %>%
+       filter(Entity %in% sample_countries$Entity)
+    ```
+
+    f\. Create a meaningful plot / figure with the dataset. Make sure to
     provide a figure caption (via the chunk options / Rmarkdown) and
     correctly label the figure.
+
+    ```{r hist, fig.cap="Trend in cigarette consumption per person",  fig.align = "left", out.extra = ""}
+    ggplot(filtered_data, aes(x = Year, y = Cigarette.consumption.per.smoker.per.day..IHME..GHDx..2012.., color = Entity)) +
+       geom_line() +
+       labs(title = "Trend in cigarette consumption per day per capita by year",
+            x = "Year",
+            y = "Average number of cigarettes per day")+
+      theme_minimal()
+    ```
 
 ## Final Note
 
