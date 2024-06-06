@@ -1,7 +1,7 @@
 ---
-title: "Exercise #X"
+title: "Exercise #3"
 subtitle: "Fortgeschrittene Statistische Software für NF"
-author: "Name (Martrikelnummer), Name (Martrikelnummer), ..."
+author: "Olga Subbotina (12341384), Sukaina Hafid (12310314)"
 date: "`r Sys.Date()`"
 output: distill::distill_article
 ---
@@ -51,7 +51,7 @@ Git allows multiple developers to work on the same project simultaneously withou
 
 Git keeps a detailed history of all changes made to the codebase, enabling developers to understand the evolution of the project and revert to previous versions if necessary.
 
-Weaknesses:
+    Weaknesses:
 
 Git has a steep learning curve, especially for beginners who may find its commands and workflows complex.
 
