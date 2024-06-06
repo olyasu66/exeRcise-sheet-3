@@ -153,7 +153,7 @@ top_10_names <- popular_names %>%
 print(top_10_names)
 ```
 
-## Exercise 4: Open Analysis (4 points)
+## Exercise 4: Open Analysis (4 points) 
 
 This exercise is a bit more open-ended. You can choose any dataset from
 [Our World in Data](https://ourworldindata.org/) and analyze it, while
@@ -165,8 +165,10 @@ a)  Go to <https://github.com/owid/owid-datasets/tree/master/datasets>
 b)  Download the dataset and track it in git.
 c)  Put the name / title of the dataset and a link to it below.
 
--   Dataset Name: ...
--   Link: <https://github.com/owid/owid-datasets/>...
+-   Dataset Name: Smoking prevalence and cigarette consumption (IHME,
+    GHDx (2012))
+-   Link:
+    [https://github.com/owid/owid-datasets/tree/master/datasets/Smoking%20prevalence%20and%20cigarette%20consumption%20(IHME%2C%20GHDx%20(2012)](https://github.com/owid/owid-datasets/tree/master/datasets/Smoking%20prevalence%20and%20cigarette%20consumption%20(IHME%2C%20GHDx%20(2012)){.uri})
 
 d)  Come up with a (research) question you want to answer with the data
     and briefly explain why you believe this is an interesting question
